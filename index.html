@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Powitania</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #greeting {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formularz Powitania</h1>
+    <input type="text" id="nameInput" placeholder="Wpisz swoje imię">
+    <button onclick="displayGreeting()">Powitaj mnie</button>
+    <div id="greeting"></div>
+
+    <script>
+        function displayGreeting() {
+            const name = document.getElementById('nameInput').value;
+            const greetingDiv = document.getElementById('greeting');
+            greetingDiv.textContent = 'Witaj, ' + name + '!';
+        }
+    </script>
+
+</body>
+</html>
